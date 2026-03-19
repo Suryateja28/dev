@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t suryateja28/dev .
+        run: docker build -t suryateja28/dev:latest .
 
       - name: Push Docker Image
-        run: docker push suryateja28/aws-app:latest
+        run: docker push suryateja28/dev:latest
