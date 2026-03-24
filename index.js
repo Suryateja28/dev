@@ -3,18 +3,20 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+
 console.log('Server is starting...');
 console.log('Setting up routes... and cd.yml file');
 
 app.get('/', (req, res) => {
-res.send('Hello World!');
-});
-app.post('/data', (req, res) => {
-const data = req.body;
-console.log('Received data:', data);
-res.send('Data received successfully!');
+  res.send('Hello World!');
 });
 
-app.listen(port, () => {
-console.log(`Server is running on http://localhost:${port}`);
+app.post('/data', (req, res) => {
+  const data = req.body;
+  console.log('Received data:', data);
+  res.send('Data received successfully!');
+});
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on port ${port}`);
 });
