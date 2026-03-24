@@ -4,6 +4,7 @@ const port = 3000;
 
 app.use(express.json());
 console.log('Server is starting...');
+console.log('Setting up routes... and cd.yml file');
 
 app.get('/', (req, res) => {
 res.send('Hello World!');
